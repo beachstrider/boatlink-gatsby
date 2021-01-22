@@ -15,7 +15,8 @@ import Image from "../components/image";
 import SEO from "../components/seo";
 import Button from "../components/buttons";
 
-import logo from "../images/logo.svg";
+import logo from "../images/logo.png";
+import logoMobile from "../images/logo-mobile.png";
 import logoLg from "../images/logo-lg.png";
 import googlePlay from "../images/google-play.png";
 import appStore from "../images/app-store.png";
@@ -86,6 +87,7 @@ function renderSuggestion(suggestion) {
 const IndexPage = () => {
   const [keyword, setKeyword] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const [openMobileToggle, setOpenMobileToggle] = useState(false);
 
   const inputProps = {
     placeholder: "Location",
@@ -103,18 +105,29 @@ const IndexPage = () => {
     setSuggestions([]);
   };
 
+  console.log(openMobileToggle);
+
   return(
     <>
       <div>
         <section className="banner-wrapper">
-          <nav className="navbar navbar-expand-lg navbar-light">
+          <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="container">
               <div className="d-flex align-items-center">
-                <a className="navbar-logo" href="#"><img src={logo} alt="logo" /></a>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <a className="navbar-logo" href="/"><img src={logo} alt="logo" /></a>
+                <button
+                  onClick={() => setOpenMobileToggle(!openMobileToggle)}
+                  className="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarNavDropdown"
+                  aria-controls="navbarNavDropdown"
+                  aria-expanded={openMobileToggle}
+                  aria-label="Toggle navigation"
+                >
                   <span className="navbar-toggler-icon" />
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <div className={`collapse navbar-collapse ${openMobileToggle ? 'open' : ''}`} id="navbarNavDropdown">
                   <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
                       <a className="nav-link" href="#">HOME</a>
@@ -128,7 +141,29 @@ const IndexPage = () => {
                     <li className="nav-item">
                       <a className="nav-link" href="#">CONTACT US</a>
                     </li>
+                    <li className="nav-item">
+                      <a className="nav-link" href="#">
+                        <img src={facebook} />
+                      </a>
+                      <a className="nav-link" href="#">
+                        <img src={linkedin} />
+                      </a>
+                      <a className="nav-link" href="#">
+                        <img src={twitter} />
+                      </a>
+                    </li>
                   </ul>
+                  <div className="download-app-wrapper">
+                    <p>Download the App</p>
+                    <div>
+                      <a href="#">
+                        <img src={googlePlay} />
+                      </a>
+                      <a href="#">
+                        <img src={appStore} />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div>
@@ -148,13 +183,18 @@ const IndexPage = () => {
                   </li>
                 </ul>
               </div>
+              <div className="navbar-logo-mobile">
+                <a href="/">
+                  <img src={logoMobile} />
+                </a>
+              </div>
             </div>
           </nav>
           <div className="banner-container d-flex align-items-center">
             <div className="banner-mask"></div>
             <div className="container">
               <div className="row d-flex justify-content-lg-center">
-                <div className="">
+                <div className="w-100">
                   <div className="content">
                     <h2 className="banner-title text-center mb-40">Connecting adventure<br />
                     seekers with great boats</h2>
@@ -178,13 +218,13 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section className="featured py-68">
+        <section className="featured">
           <div className="container text-center">
             <div className="d-flex justify-content-between heading">
               <h3 className="featured-title">Listings near Torronto</h3>
-              <a className="link blue underline" href="#">View All 25 &gt;</a>
+              <a className="view-all link blue underline" href="#">View All 25 &gt;</a>
             </div>
-            <div className="row">
+            <div className="item-boat-container row">
               <div className="col-lg-3 col-md-6">
                 <div className="item-boat">
                   <img src={featured1} alt="work" />
@@ -312,9 +352,9 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section className="how-work py-68">
+        <section className="how-work">
           <div className="container-small">
-            <div className="heading text-center mb-60">
+            <div className="heading text-center">
               <h2 className="title-2">How it work?</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna,<br />
               porttitor rhoncus dolor purus non et luctus venen et luctus venen agna fringilla urna</p>
@@ -354,7 +394,7 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section className="company py-68">
+        <section className="company">
           <div className="container">
             <div className="row d-flex align-items-center">
               <div className="col-md-6">
@@ -389,7 +429,7 @@ const IndexPage = () => {
               <h2 className="title-2 text-white">Subscribe to have <span style={{color: '#0096EA'}}>Discount 10%</span></h2>
               <p className="text-white" style={{opacity: 0.7}}>Get the Onboarding Package for Free and enjoy our platform with<br />the support of our professional onboarding team.</p>
               <form className="form-inline d-flex justify-content-center align-items-center">
-                <div className="subscribe-form-group mb-2">
+                <div className="subscribe-form-group">
                   <input type="text" placeholder="Your email" />
                   <button type="submit">Subscribe</button>
                 </div>
@@ -397,9 +437,9 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
-        <section className="faq py-68">
+        <section className="faq">
           <div className="container">
-            <div className="heading text-center mb-50">
+            <div className="heading text-center">
               <h2 className="title-2">FAQ</h2>
               <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna,<br />porttitor rhoncus dolor purus non et luctus venen et luctus venen agna fringilla urna</p>
             </div>
@@ -453,7 +493,7 @@ const IndexPage = () => {
             <div className="content">
               <div className="d-flex align-items-center">
                 <div>
-                  <h2 className="banner-bottom-title">Connecting adventure<br />seekers with great boats</h2>
+                  <h2 className="banner-bottom-title">Connecting Adventure <br />Seekers With Great Boats</h2>
                   <h5 className="banner-bottom-text">Book motorboat or sail yacht for have a great vacation ever!</h5>
                   <div className="d-flex download-img-wrapper">
                     <a href="#">
@@ -474,8 +514,8 @@ const IndexPage = () => {
             <div className="wrapper">
               <div className="footer-col">
                 <div className="who">
-                  <img src={logoLg} alt="image" className="mb-15" />
-                  <div className="d-flex justify-content-between">
+                  <img src={logoLg} alt="image" className="footer-logo" />
+                  <div className="social-container">
                     <a href="#">
                       <img src={facebook} />
                     </a>
@@ -531,7 +571,10 @@ const IndexPage = () => {
                   <h4>Get in Touch</h4>
                   <ul>
                     <li>
-                      <a>info@boatlink.com<br />+1 844-721-7120</a>
+                      <a href="mailto:info@boatlink.com">info@boatlink.com</a>
+                    </li>
+                    <li>
+                      <a href="tel:+1 844-721-7120">+1 844-721-7120</a>
                     </li>
                   </ul>
                 </div>

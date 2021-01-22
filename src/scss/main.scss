@@ -9,7 +9,6 @@
 @import "base/animations";
 @import "base/typography";
 @import "base/utilities";
-@import "base/media";
 
 @import "pages/_all_pages";
 @import "pages/home";
@@ -22,3 +21,5 @@
 
 @import "layout/header";
 @import "layout/footer";
+
+@import "base/media";

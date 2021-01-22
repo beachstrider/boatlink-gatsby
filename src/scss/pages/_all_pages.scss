@@ -6,6 +6,10 @@
     transition: all .3s ease-in-out;
     overflow: hidden;
 
+    img{
+        width: 100%;
+    }
+
     &:hover {
         box-shadow: 0 20px 20px 0 rgba(0,0,0,0.15);
         transform: translateY(-10px);
@@ -68,4 +72,9 @@
             }
         }
     }
+}
+
+.navbar-toggler{
+    border: none;
+    z-index: 100;
 }

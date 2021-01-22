@@ -1,4 +1,5 @@
 section.featured {
+    padding-top: 68px;
     .container{
         .heading{
             margin-bottom: 34px;
@@ -15,27 +16,34 @@ section.featured {
 }
 
 section.how-work{
-    .box-howwork{
-        max-width: 300px;
-        padding: 40px 30px 16px;
-        border-radius: 16px;
-
-        &.colored{
-            background: #02456A;
+    padding-top: 68px;
+    .container-small{
+        .heading{
+            margin-bottom: 60px;
         }
-
-        h4{
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 38px;
-        }
-        p{
-            margin-bottom: 42px;
+        .box-howwork{
+            max-width: 300px;
+            padding: 40px 30px 16px;
+            border-radius: 16px;
+    
+            &.colored{
+                background: #02456A;
+            }
+    
+            h4{
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 38px;
+            }
+            p{
+                margin-bottom: 42px;
+            }
         }
     }
 }
 
 section.company{
+    padding-top: 68px;
     .container{
         .title-2{
             margin-bottom: 40px;
@@ -85,6 +93,7 @@ section.check {
                 background: #fff;
                 border-radius: 50px;
                 overflow: hidden;
+                margin-bottom: 10px;
                 input{
                     width: 100%;
                     padding-left: 14px;
@@ -122,8 +131,19 @@ section.check {
     }
 }
 
+section.faq{
+    padding-top: 68px;
+    padding-bottom: 64px;
+    & > .container{
+        & > .heading{
+            margin-bottom: 50px;
+        }
+    }
+}
+
 section.connecting{
     background: url("../images/bg/home-banner-bottom.png");
+    background-position: center;
     height: 663px;
     padding: 104px 0;
     .container{
@@ -160,6 +180,7 @@ section.connecting{
         position: relative;
         height: 557px;
         background-image: url("../images/bg/home-banner-top.png");
+        background-position: center;
         .banner-mask{
             position:absolute;
             width: 100%;

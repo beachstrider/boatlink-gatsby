@@ -9,6 +9,9 @@
         margin-right: 30px;
     }
 
+    .navbar-logo-mobile{
+        display: none;
+    }
     .nav-item {
         margin: 0;
 
@@ -72,6 +75,19 @@
 
     .dropdown-toggle:after {
         content: none;
+    }
+
+    .navbar-nav{
+        > li.nav-item{
+            &:nth-child(5){
+                display: none;
+            }
+        }
+    }
+    
+
+    .download-app-wrapper{
+        display: none;
     }
 
 }

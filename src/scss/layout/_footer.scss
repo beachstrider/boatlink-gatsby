@@ -11,6 +11,13 @@
             .footer-col{
                 .who {
                     padding-right: 30px;
+                    .footer-logo{
+                        margin-bottom: 15px;
+                    }
+                    .social-container{
+                        display: flex;
+                        justify-content: space-between;
+                    }
                 }
                 .links {
                     ul {
@@ -91,8 +98,7 @@
         font-weight: normal;
         font-size: 12px;
         line-height: 16px;
-        color: #FFFFFF;
-        opacity: 0.2;
+        color: #97B0C8;
         display: inline-block;margin: 0;
         padding: 0;
         &.copyright{
