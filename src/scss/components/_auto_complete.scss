@@ -81,3 +81,9 @@
 .react-autosuggest__suggestion--highlighted {
     background-color: #ddd;
 }
+
+@media (max-width: 767.98px) {
+    .react-autosuggest__suggestions-container--open {
+        top: 50px;
+    }
+}

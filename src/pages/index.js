@@ -105,8 +105,6 @@ const IndexPage = () => {
     setSuggestions([]);
   };
 
-  console.log(openMobileToggle);
-
   return(
     <>
       <div>
