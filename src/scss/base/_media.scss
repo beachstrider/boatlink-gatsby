@@ -1,0 +1,256 @@
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .navbar {
+        background: $color-blue-verylight !important;
+        border-bottom: 1px solid rgba($text-color-paragraph, .2);
+    }
+    .slider {
+        text-align: center;
+        padding: 200px 0;
+        height: auto !important;
+
+        .content {
+            margin-bottom: 50px;
+        }
+    }
+
+    .how-work {
+        padding: 120px 0 90px 0;
+        .box{
+            margin-bottom: 30px;
+            }
+    }
+
+    .company {
+        text-align: center;
+
+        .text-1 {
+            margin-top: 50px;
+        }
+    
+        .text-2 {
+            margin-bottom: 50px;
+        }
+    }
+
+    .check {
+        display: none;
+    }
+
+    .offers {
+        padding:  0 0 90px 0 !important;
+
+        .box {
+            margin-bottom: 30px !important;
+        }
+    }
+    .counter {
+        .content {
+            background: #ffffff;
+        }
+        .circle {
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .item:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .testimonials {
+        padding: 0 !important;
+        .carousel-item {
+            padding: 0 !important;
+        }
+        .control {
+            display: none;
+        }
+        .carousel-inner {
+            padding: 70px 30px !important;
+        }
+    }
+
+    .ready {
+        h2 {
+            margin-bottom: 30px;
+        }
+    }
+
+    .footer {
+        text-align: center;
+        .who {
+            margin-bottom: 30px;
+            padding: 0;
+        }
+        .links {
+            margin-bottom: 30px;
+        }
+    }
+
+ }
+
+ // Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .navbar {
+        background: $color-blue-verylight;
+        border-bottom: 1px solid rgba($text-color-paragraph, .2);
+    }
+    .slider {
+        text-align: center;
+        padding: 200px 0;
+        height: auto !important;
+
+        .content {
+            margin-bottom: 50px;
+        }
+    }
+
+    .how-work {
+        padding: 120px 0 90px 0;
+        .box{
+            margin-bottom: 30px;
+            }
+    }
+
+    .company {
+        text-align: center;
+
+        .text-1 {
+            margin-top: 50px;
+        }
+    
+        .text-2 {
+            margin-bottom: 50px;
+        }
+    }
+
+    .check {
+        display: none;
+    }
+
+    .offers {
+        padding:  0 0 90px 0 !important;
+
+        .box {
+            margin-bottom: 30px !important;
+        }
+    }
+    .counter {
+        .content {
+            background: #ffffff;
+        }
+        .circle {
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .item:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .testimonials {
+        padding: 0 !important;
+        .carousel-item {
+            padding: 0 !important;
+        }
+        .control {
+            display: none;
+        }
+        .carousel-inner {
+            padding: 70px 30px !important;
+        }
+    }
+
+    .ready {
+        h2 {
+            margin-bottom: 30px;
+        }
+    }
+
+    .footer {
+        text-align: center;
+        .who {
+            margin-bottom: 30px;
+            padding: 0;
+        }
+        .links {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .navbar {
+        background: $color-blue-verylight;
+        border-bottom: 1px solid rgba($text-color-paragraph, .2);
+    }
+    .slider {
+        padding: 200px 0;
+        padding-top: 250px;
+        height: auto !important;
+
+        .content {
+            margin-bottom: 50px;
+        }
+    }
+
+    .how-work {
+        padding: 120px 0 90px 0;
+        .box{
+            margin-bottom: 30px;
+            }
+    }
+
+    .check {
+        display: none;
+    }
+
+    .offers {
+        padding:  0 0 90px 0 !important;
+
+        .box {
+            margin-bottom: 30px !important;
+        }
+    }
+    .counter {
+        .content {
+            background: #ffffff;
+        }
+        .circle {
+            display: inline-block;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .item:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .testimonials {
+        padding: 0 !important;
+        .carousel-item {
+            padding: 0 !important;
+        }
+        .control {
+            display: none;
+        }
+        .carousel-inner {
+            padding: 70px 30px !important;
+        }
+    }
+
+    .ready {
+        h2 {
+            margin-bottom: 30px;
+        }
+    }
+
+    .footer {
+        .icon {
+            margin-bottom: 10px;
+        }
+    }
+ }
