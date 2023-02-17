@@ -3,7 +3,7 @@
 ![image](https://user-images.githubusercontent.com/48445639/219714766-73265c72-1514-4e7c-add3-743fc06d9431.png)
 
 <h1 align="center">
-  BoatLink
+  TheBoatLink
 </h1>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
